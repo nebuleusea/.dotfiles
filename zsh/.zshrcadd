@@ -1,0 +1,5 @@
+
+export EDITOR=nvim
+alias lzg=lazygit
+alias rag=ranger
+
