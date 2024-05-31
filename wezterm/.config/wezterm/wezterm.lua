@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+
 local options = {
 	font_size = 0,
 	initial_cols = 0,
@@ -9,7 +10,7 @@ local options = {
 }
 if wezterm.target_triple == "aarch64-apple-darwin" then
 	options.font_size = 18
-	options.initial_cols = 100
+	options.initial_cols = 110
 	options.initial_rows = 28
 	options.default_prog = { "zsh", "-l" }
 	options.launch_menu = {
@@ -56,13 +57,13 @@ local config = {
 	font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" }),
 	color_scheme = "Catppuccin Mocha",
 	use_fancy_tab_bar = false,
+	show_new_tab_button_in_tab_bar = true,
 	hide_tab_bar_if_only_one_tab = false,
 	window_decorations = "RESIZE",
-	show_new_tab_button_in_tab_bar = true,
 	window_background_opacity = 0.9,
-	macos_window_background_blur = 70,
 	text_background_opacity = 0.9,
-	adjust_window_size_when_changing_font_size = true,
+	macos_window_background_blur = 70,
+	adjust_window_size_when_changing_font_size = false,
 	window_padding = {
 		left = 20,
 		right = 20,
