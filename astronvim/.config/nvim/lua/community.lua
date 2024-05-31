@@ -9,6 +9,9 @@ return {
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.motion.flash-nvim" },
+  { import = "astrocommunity.search.nvim-hlslens" },
+  { import = "astrocommunity.programming-language-support.csv-vim" },
   -- { import = "astrocommunity.utility.noice-nvim" },
   -- import/override with your plugins folder
 }
