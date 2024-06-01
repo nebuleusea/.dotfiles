@@ -17,4 +17,5 @@ end
 
 require "lazy_setup"
 require "mappings"
+require "options"
 require "polish"
