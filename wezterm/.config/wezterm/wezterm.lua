@@ -9,7 +9,7 @@ local options = {
 	keys = {},
 }
 if wezterm.target_triple == "aarch64-apple-darwin" then
-	options.font_size = 18
+	options.font_size = 15
 	options.initial_cols = 110
 	options.initial_rows = 28
 	options.default_prog = { "zsh", "-l" }
@@ -60,10 +60,11 @@ local config = {
 	show_new_tab_button_in_tab_bar = true,
 	hide_tab_bar_if_only_one_tab = false,
 	window_decorations = "RESIZE",
-	window_background_opacity = 0.75,
-	text_background_opacity = 0.75,
-	macos_window_background_blur = 70,
+	window_background_opacity = 0.95,
+	text_background_opacity = 0.95,
+	-- macos_window_background_blur = 10,
 	adjust_window_size_when_changing_font_size = false,
+	default_cursor_style = "SteadyBar",
 	window_padding = {
 		left = 20,
 		right = 20,

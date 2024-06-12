@@ -45,7 +45,11 @@ yabai -m config                                 \
 
 yabai -m rule --add app="^(System Settings|系统设置)$" manage=off 
 yabai -m rule --add app="^访达$" manage=off 
+yabai -m rule --add app="^备忘录$" manage=off 
 yabai -m rule --add app="^活动监视器$" manage=off 
+
+yabai -m rule --add app="^迅雷$" manage=off 
+yabai -m rule --add app="^LocalSend$" manage=off 
 
 borders active_color=0xff48d1cc inactive_color=0xff494d64 width=5.0 &
 
