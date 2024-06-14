@@ -26,6 +26,24 @@ if wezterm.target_triple == "aarch64-apple-darwin" then
 			action = wezterm.action.ToggleFullScreen,
 		},
 	}
+elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
+	options.font_size = 15
+	options.initial_cols = 110
+	options.initial_rows = 28
+	options.default_prog = { "zsh", "-l" }
+	options.launch_menu = {
+		{ label = " Top", args = { "top" } },
+		{ label = " Bash", args = { "bash", "-l" } },
+		{ label = " Zsh", args = { "zsh", "-l" } },
+	}
+	options.keys = {
+		{ key = "z", mods = "ALT", action = wezterm.action.ShowLauncherArgs({ flags = "LAUNCH_MENU_ITEMS" }) },
+		{
+			key = "F11",
+			mods = "CTRL",
+			action = wezterm.action.ToggleFullScreen,
+		},
+	}
 elseif wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	options.font_size = 12
 	options.initial_cols = 110
