@@ -27,10 +27,10 @@ if wezterm.target_triple == "aarch64-apple-darwin" then
 		},
 	}
 elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
-	options.font_size = 15
+	options.font_size = 25
 	options.initial_cols = 110
 	options.initial_rows = 28
-	options.default_prog = { "zsh", "-l" }
+	options.default_prog = { "fish", "-l" }
 	options.launch_menu = {
 		{ label = " Top", args = { "top" } },
 		{ label = " Bash", args = { "bash", "-l" } },
@@ -78,11 +78,11 @@ local config = {
 	show_new_tab_button_in_tab_bar = true,
 	hide_tab_bar_if_only_one_tab = false,
 	window_decorations = "RESIZE",
-	window_background_opacity = 0.95,
+	window_background_opacity = 0.97,
 	text_background_opacity = 0.95,
 	-- macos_window_background_blur = 10,
 	adjust_window_size_when_changing_font_size = false,
-	default_cursor_style = "SteadyBar",
+	-- default_cursor_style = "SteadyBar",
 	window_padding = {
 		left = 20,
 		right = 20,
