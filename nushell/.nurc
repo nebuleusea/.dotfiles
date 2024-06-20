@@ -1,0 +1,8 @@
+alias c = clear
+alias l = ls -la
+alias lzg = lazygit
+# def pon [] {
+#     $env.http_proxy = http://127.0.0.1:20171
+#     # $env.https_proxy = "http://127.0.0.1:20171"
+# }
+
