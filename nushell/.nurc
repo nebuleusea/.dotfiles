@@ -1,6 +1,8 @@
 alias c = clear
 alias l = ls -la
-alias lzg = lazygit
+alias v = nvim
+alias lg = lazygit
+
 def --env yy [...args] {
 	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
 	yazi ...$args --cwd-file $tmp
@@ -10,8 +12,13 @@ def --env yy [...args] {
 	}
 	rm -fp $tmp
 }
-# def pon [] {
-#     $env.http_proxy = http://127.0.0.1:20171
-#     # $env.https_proxy = "http://127.0.0.1:20171"
-# }
 
+def --env pon [] {
+  $env.http_proxy = http://127.0.0.1:20171
+  $env.https_proxy = http://127.0.0.1:20171
+}
+
+def --env poff [] {
+  hide-env http_proxy 
+  hide-env https_proxy 
+}

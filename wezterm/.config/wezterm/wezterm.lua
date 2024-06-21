@@ -93,7 +93,7 @@ local config = {
 	initial_cols = options.initial_cols,
 	initial_rows = options.initial_rows,
 	font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" }),
-	color = options.colors,
+	colors = options.colors,
 	color_scheme = "Catppuccin Mocha",
 	use_fancy_tab_bar = false,
 	show_new_tab_button_in_tab_bar = true,
