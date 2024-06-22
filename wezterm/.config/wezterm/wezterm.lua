@@ -3,15 +3,19 @@ local hostname = wezterm.hostname()
 
 local options = {}
 
-if hostname == "appledarwin" then
-	options.font_size = 15
-	options.initial_cols = 110
-	options.initial_rows = 28
-	options.default_prog = { "zsh", "-l" }
+if hostname == "macair.lan" then
+	options.font_size = 18
+	options.initial_cols = 108
+	options.initial_rows = 30
+	options.default_prog = { "/opt/homebrew/bin/fish", "-l" }
+	options.window_background_opacity = 0.9
+	options.macos_window_background_blur = 30
 	options.launch_menu = {
 		{ label = " Top", args = { "top" } },
 		{ label = " Bash", args = { "bash", "-l" } },
 		{ label = " Zsh", args = { "zsh", "-l" } },
+		{ label = " Fish", args = { "/opt/homebrew/bin/fish", "-l" } },
+		{ label = " Nu", args = { "/opt/homebrew/bin/nu", "-l" } },
 	}
 	options.keys = {
 		{ key = "z", mods = "CMD", action = wezterm.action.ShowLauncherArgs({ flags = "LAUNCH_MENU_ITEMS" }) },
@@ -26,8 +30,8 @@ elseif hostname == "jarmerarl" then
 	options.initial_cols = 120
 	options.initial_rows = 28
 	options.colors = {
-		foreground = 'white',
-		background = 'black'
+		foreground = "white",
+		background = "black",
 	}
 	options.default_prog = { "nu", "-l" }
 	options.launch_menu = {
@@ -92,7 +96,11 @@ local config = {
 	font_size = options.font_size,
 	initial_cols = options.initial_cols,
 	initial_rows = options.initial_rows,
-	font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" }),
+	-- font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" }),
+	font = wezterm.font_with_fallback({
+		{ family = "JetBrainsMono Nerd Font Mono", weight = "Medium" },
+		{ family = "Noto Sans CJK SC", weight = "Bold" },
+	}),
 	colors = options.colors,
 	color_scheme = "Catppuccin Mocha",
 	use_fancy_tab_bar = false,
@@ -100,8 +108,8 @@ local config = {
 	hide_tab_bar_if_only_one_tab = false,
 	window_decorations = "RESIZE",
 	window_background_opacity = options.window_background_opacity,
+	macos_window_background_blur = options.macos_window_background_blur,
 	text_background_opacity = 0.95,
-	-- macos_window_background_blur = 10,
 	adjust_window_size_when_changing_font_size = false,
 	-- default_cursor_style = "SteadyBar",
 	window_padding = {
