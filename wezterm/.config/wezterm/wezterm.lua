@@ -49,11 +49,11 @@ elseif hostname == "jarmerarl" then
 		},
 	}
 elseif hostname == "arch" then
-	options.font_size = 28
-	options.initial_cols = 130
-	options.initial_rows = 28
-	options.window_background_opacity = 0.99
-	options.default_prog = { "nu", "-l" }
+	options.font_size = 26
+	options.initial_cols = 138
+	options.initial_rows = 32
+	options.window_background_opacity = 0.96
+	options.default_prog = { "fish", "-l" }
 	options.launch_menu = {
 		{ label = " Top", args = { "top" } },
 		{ label = " Bash", args = { "bash", "-l" } },
@@ -68,7 +68,7 @@ elseif hostname == "arch" then
 			action = wezterm.action.ToggleFullScreen,
 		},
 	}
-elseif hostname == "pc-windows-msvc" then
+elseif hostname == "pc-windows" then
 	options.font_size = 12
 	options.initial_cols = 110
 	options.initial_rows = 25
@@ -99,7 +99,7 @@ local config = {
 	-- font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" }),
 	font = wezterm.font_with_fallback({
 		{ family = "JetBrainsMono Nerd Font Mono", weight = "Medium" },
-		{ family = "Noto Sans CJK SC", weight = "Bold" },
+		{ family = "Noto Sans CJK SC",             weight = "Bold" },
 	}),
 	colors = options.colors,
 	color_scheme = "Catppuccin Mocha",
