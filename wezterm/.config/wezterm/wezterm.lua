@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 local hostname = wezterm.hostname()
+local act = wezterm.action
 
 local options = {}
 
@@ -61,11 +62,21 @@ elseif hostname == "arch" then
 		{ label = " Nu", args = { "nu", "-l" } },
 	}
 	options.keys = {
-		{ key = "z", mods = "ALT", action = wezterm.action.ShowLauncherArgs({ flags = "LAUNCH_MENU_ITEMS" }) },
+		{ key = '1', mods = 'ALT', action = act.ActivateTab(0) },
+		{ key = '2', mods = 'ALT', action = act.ActivateTab(1) },
+		{ key = '3', mods = 'ALT', action = act.ActivateTab(2) },
+		{ key = '4', mods = 'ALT', action = act.ActivateTab(3) },
+		{ key = '5', mods = 'ALT', action = act.ActivateTab(4) },
+		{ key = '6', mods = 'ALT', action = act.ActivateTab(5) },
+		{ key = '7', mods = 'ALT', action = act.ActivateTab(6) },
+		{ key = '8', mods = 'ALT', action = act.ActivateTab(7) },
+		{ key = '9', mods = 'ALT', action = act.ActivateTab(8) },
+		{ key = 'w', mods = 'ALT', action = act.CloseCurrentTab { confirm = true } },
+		{ key = "z", mods = "ALT", action = act.ShowLauncherArgs({ flags = "LAUNCH_MENU_ITEMS" }) },
 		{
 			key = "F11",
 			mods = "CTRL",
-			action = wezterm.action.ToggleFullScreen,
+			action = act.ToggleFullScreen,
 		},
 	}
 elseif hostname == "pc-windows" then
@@ -99,7 +110,7 @@ local config = {
 	-- font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" }),
 	font = wezterm.font_with_fallback({
 		{ family = "JetBrainsMono Nerd Font Mono", weight = "Medium" },
-		{ family = "Noto Sans CJK SC", weight = "Bold" },
+		{ family = "Noto Sans CJK SC",             weight = "Bold" },
 	}),
 	colors = options.colors,
 	color_scheme = "Catppuccin Mocha",
