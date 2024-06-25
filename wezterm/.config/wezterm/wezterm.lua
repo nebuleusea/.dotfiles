@@ -3,7 +3,7 @@ local hostname = wezterm.hostname()
 
 local options = {}
 
-if hostname == "macair.lan" then
+if hostname == "macair" then
 	options.font_size = 18
 	options.initial_cols = 108
 	options.initial_rows = 30
@@ -99,7 +99,7 @@ local config = {
 	-- font = wezterm.font("JetBrainsMono Nerd Font Mono", { weight = "Regular" }),
 	font = wezterm.font_with_fallback({
 		{ family = "JetBrainsMono Nerd Font Mono", weight = "Medium" },
-		{ family = "Noto Sans CJK SC",             weight = "Bold" },
+		{ family = "Noto Sans CJK SC", weight = "Bold" },
 	}),
 	colors = options.colors,
 	color_scheme = "Catppuccin Mocha",
