@@ -1,4 +1,0 @@
--- require("config.appearance")
--- require("config.bindings")
--- require("config.fonts")
--- require("config.launch")

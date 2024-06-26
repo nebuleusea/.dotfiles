@@ -5,7 +5,7 @@ local options = {}
 
 if string.find(hostname, "macair") ~= nil then
 	options.initial_cols = 108
-	options.initial_rows = 30
+	options.initial_rows = 31
 	options.window_background_opacity = 0.9
 	options.macos_window_background_blur = 30
 elseif hostname == "jarmerarl" then
