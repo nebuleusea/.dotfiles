@@ -3,13 +3,13 @@ local hostname = wezterm.hostname()
 
 local font = wezterm.font_with_fallback({
 	{ family = "JetBrainsMono Nerd Font Mono", weight = "Medium" },
-	{ family = "Noto Sans CJK SC",             weight = "Bold" },
+	{ family = "Noto Sans CJK SC", weight = "Bold" },
 })
 
 local font_size
 
 if string.find(hostname, "macair") ~= nil then
-	font_size = 18
+	font_size = 16
 elseif hostname == "jarmerarl" then
 	font_size = 13
 elseif hostname == "arch" then
