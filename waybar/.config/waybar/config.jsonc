@@ -11,13 +11,15 @@
 
   // Modules configuration
   "hyprland/workspaces": {
+    // "active-only": true,
+    "all-outputs": true,
     "format": "{name}",
-    "persistent-workspaces": {
-      "*": 10,
-    },
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    // "persistent-workspaces": {
+    //   "*": 10,
+    // },
+    // "on-click": "activate",
+    // "on-scroll-up": "hyprctl dispatch workspace e+1",
+    // "on-scroll-down": "hyprctl dispatch workspace e-1",
   },
   "hyprland/window": {
     "format": "\uf061 {initialTitle}",
